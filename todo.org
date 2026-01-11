@@ -1,0 +1,45 @@
+(the todos are in italian, I'm still versioning them, but they're in italian)
+
+* hang e parsing
+per adesso quando provi a leggere il body di una request senza body il primo read blocca
+sarebbe a dire, se rileggi da una request da cui hai già letto tutto, blocca
+
+se leggi tutto in una botta questo non succede
+quindi "leggi tutto in una botta" non richiede questi accorgimenti, ma avere più funzoini che fanno tutte read sì
+
+un'idea potrebbe essere quella di far sì che una funzione di parsin segnali alle funzioni di parsing successive se ha raggiuto end of file
+
+un'altra idea potrebbe essere quella di rendere il parser una macchina a stati
+questo risolverebbe abbastanza problemi ma per permettere parsing diversi di body sarebbe comunque necessario trovare un modo di passarlo a parser successivi :|
+direi la prima
+bisogna anche vedere come testarla però :|
+
+penso anche a fini di efficienza non voglio stare troppo a read-whole-file
+preferirei avere qualcosa più in streaming se poi la request è per l'invio o ricezione di file particolarmente grossi
+
+* correttezza
+** Unicode
+vedere come gestisce unicode
+e immagini
+e robe simili
+
+come benchmark abbiamo ysap.sh da una parte, poter servire ysap.sh
+e dall'altra boh, guerra di piero, beowulf, cazzo ne so
+
+** servire file
+permettere al server di leggere da una qualche directory e servire file da quella
+roba abbastanza solita
+
+* un minimo di organizzazione
+splittamooo
+in fileeeee
+
+* abusi futuri
+arrivato a un punto in cui il server comincia ad essere stabile e abusabile ci starebbe fare un miiiini framework di backend col suddetto
+per ridere
+
+e per resuscitare quel mostro di xml-lisp che devo ancora finire il branch virdom come si deve
+e fare tutto il constant folding del caso che volevo farci
+
+e un router e cazzi e mazzi vari
+per ridere
