@@ -1,0 +1,6 @@
+(defgeneric render (body))
+(defmethod render ((body http-plaintext-body))
+  (apply #'crlf-separate (http-plaintext-body-plaintext body)))
+(defmethod render ((body http-null-body))
+  (declare (ignore body))
+  "")

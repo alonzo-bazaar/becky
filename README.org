@@ -5,6 +5,8 @@
 
 Random backend tooling such as this, for me at least, is the perfect boredom project.
 
-It provides a clear but not necessarily trivial problem statement (a program that responds to html stuff with other html stuff and can handle a bunch of formats), and an (almost) practical grounds for one to bikeshed several components whilst never straying too far from their application, plus always having an environment to put those components in, and around which to design them.
+It provides a clear but not necessarily trivial problem statement (a program that responds to html stuff with other html stuff and can handle a bunch of formats), it can extended ad nauseam to add this or that other feature (from basic ones like concurrency to "what if I homebrewed a stream parsing library to handle json?")
+
+It furthermore provides an (almost) practical grounds for one to bikeshed several components whilst never straying too far from their application, plus always having an environment to put those components in, and around which to design them.
 
 Now, I am currently rather bored, and shall most likey stay bored for the foreseeable future, so I'm doing this.
